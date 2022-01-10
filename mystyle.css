@@ -1,21 +1,47 @@
-
 .text{
   text-shadow: black;
   text-decoration: underline;
   font-family: cursive, fantasy, georgia, none;
   cursor: url("text.png"), url("text.cur"), default;
 }
-button{
-  color: #fbfcfd;
-  padding: 10px 25px;
-  background: transparent;
-  border: 1px solid #fff;
-  border-radius: 20px;
-  outline: none;
-  cursor: url("click.png"), url("click.cur"), default;
+button {
+  background: #232323;
+  border: 1px solid #323232;
+  color: #fff;
+  padding: 10px 40px;
+  border-radius: 4px;
+  box-shadow: 2px 4px 12px rgba(0,0,0,0.16);
+  position: relative;
+  cursor: pointer;
+  transition: all ease-in-out 0.5s;
+}
+
+button:after {
+  content: '';
+  background: #fff;
+  opacity:0.2;
+  width: 0;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: all ease-in 0.3s;
+  z-index: 0;
+}
+
+button:hover::after {
+  width: 100%;
 }
 body{
   background-image: url("test.svg");
   background-size: cover;
   cursor: url("1.png"), url("2.cur"), default;
+}
+h2{
+  color: white;
+  cursor: url("text.png"), url("text.cur"), default;
+}
+.too_big{
+  width: 500px;
+  height: 250px;
 }
